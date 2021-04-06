@@ -3,7 +3,7 @@
   <view class="header">
     <!-- 未登录页面 -->
     <view class="no-login" wx:if="{{isLogin==false}}">
-      <image src="../../static/my/logo1.jpg"></image>
+      <image src="../../imgs/my.png"></image>
       <button size="mini" plain="{{true}}" bindtap="getUserInfo">登录</button>
     </view>
     <!-- 登录页面 -->
@@ -17,7 +17,7 @@
 
   <!-- 导航栏 -->
   <view class="menu">
-    <view class="{{tid==0?'active':''}}" bindtap="click" id="0">菜单</view>
+    <view class="{{tid==0?'active':''}}" bindtap="click" id="0">书架</view>
     <view class="{{tid==1?'active':''}}" bindtap="click" id="1">分类</view>
     <view class="{{tid==2?'active':''}}" bindtap="click" id="2">关注</view>
   </view>
@@ -32,14 +32,14 @@
   </view>
   <!-- 登录之后 -->
   <view wx:else>
-    <!-- 菜单列表 -->
+    <!-- 图书列表 -->
     <view wx:if="{{tid==0}}">
-      <!-- 菜单列表 -->
+      <!-- 图书列表 -->
       <view>
         <!-- 没有东西 -->
         <view wx:if="{{ !true }}" class="no-pbmenu">
           <image src="../../static/my/img01.jpg"></image>
-          <view>您还没发布过菜单哦</view>
+          <view>您还没发布过图书哦</view>
         </view>
         <!-- 有东西 -->
         <view class="hot-recipe-list">

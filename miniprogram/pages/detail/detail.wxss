@@ -59,7 +59,7 @@
   margin-bottom: 10rpx;
 }
 .makes-content{
-  color: #cecece;
+  color: #000;
 }
 .makes-content view{
   margin-top: 15rpx;

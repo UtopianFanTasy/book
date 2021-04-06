@@ -48,7 +48,7 @@ Page({
     let image = await multiUpload(arr).catch(err => console.error(err))
     console.log(image);
     let {name,typeid,info}=e.detail.value;
-    let {avatarUrl,nickName}= app.globalData.userInfo
+    let {avatarUrl,nickName}= wx.getStorageSync('useri')
     let views=0;
     let likes=0;
     let addtime=new Date().getTime()
@@ -58,5 +58,8 @@ Page({
     }).catch(err=>console.error(err))
     wx.hideLoading()
     console.log(result)
+    wx.navigateBack({
+      delta: 1
+    })
   }
 })

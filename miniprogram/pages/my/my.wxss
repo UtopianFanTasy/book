@@ -5,13 +5,14 @@ page{
 .header{
   height: 380rpx;
   width: 100%;
-  background-color: #ea932a;
+  background-color: #000;
 }
 .no-login image,.login  image{
   width: 160rpx;
   height: 160rpx;
   border-radius: 50%;
   margin-top: 60rpx;
+  background-color:white;
 }
 .no-login,.login{
   display: flex;
@@ -51,9 +52,10 @@ page{
   text-align: center;
 }
 .menu .active{
-  border-bottom:2px solid #ea932a ;
-  color: #ea932a;
+  border-bottom:2px solid #000 ;
+  color: #333;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .body-nologin  image,.no-pbmenu  image{

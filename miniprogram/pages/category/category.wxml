@@ -1,5 +1,5 @@
 <view class='adminPerson'>
-	<!-- 菜谱分类列表 (菜谱分类列表) -->
+	<!-- 分类列表  -->
 	<view class='cpfllb'>
 		<view wx:for="{{typelist}}" wx:key="_id">
 			<text class="txt">{{item.name}}</text>
@@ -11,18 +11,18 @@
 			<image src="/static/type/add.png"></image>
 		</view>
 	</view>
-	<!--    页面 （菜谱添加分类） -->
+	<!--    页面  -->
 	<view class='cptjfl' wx:if="{{addTag==true}}">
 		<mp-cell prop="mobile" ext-class=" weui-cell_vcode">
-			<!-- 输入菜谱分类 -->
+			<!-- 输入分类 -->
 			<input class="weui-input" placeholder="输入菜谱分类" model:value="{{name}}" />
 			<view slot="footer" class="weui-vcode-btn" bindtap="typeadd">添加</view>
 		</mp-cell>
 	</view>
-	<!-- 修改页面  （菜谱修改分类）-->
+	<!-- 修改页面  （修改分类）-->
 	<view class='cpxgfl' wx:if="{{updateTag==true}}">
 		<mp-cell prop="mobile" ext-class=" weui-cell_vcode">
-			<!-- 输入菜谱分类 -->
+			<!-- 输入分类 -->
 			<input model:value="{{name}}" class="weui-input" placeholder="输入菜谱分类" />
 			<view slot="footer" class="weui-vcode-btn" model:value="{{name}}" bindtap="update">修改</view>
 		</mp-cell>

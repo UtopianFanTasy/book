@@ -1,13 +1,18 @@
 <view>
     <!-- 顶部图片 -->
-    <view class="top-image">
-        <image src="../../imgs/index_02.jpg"></image>
-    </view>
+    <swiper class="swiper top-image" indicator-dots="true" indicator-color="#fff" indicator-active-color="#eb9834">
+      <swiper-item>
+        <image src="../../imgs/aa13.jpg" mode="aspectFill"></image>
+      </swiper-item>
+      <swiper-item>   
+        <image src="../../imgs/385b9b058688111.jpg" mode="aspectFill"></image>
+      </swiper-item>
+  </swiper>
     <!-- 类别名称 -->
     <view class="top-type">
         <view bindtap="totype">
             <image src="../../imgs/index_05.jpg"></image>
-            <text>菜谱分类</text>
+            <text>图书分类</text>
         </view>
         <block wx:for="{{ types }}">
             <view>
@@ -17,17 +22,17 @@
         </block>
         <view>
             <image src="../../imgs/index_11.jpg"></image>
-            <text>关注菜谱</text>
+            <text>关注图书</text>
         </view>
     </view>
 
-    <!-- 热门菜谱 -->
+    <!-- 热门图书 -->
     <view class="hot-recipe">
         <view class="hot-recipe-title">
             <image src="../../imgs/index_18.jpg"></image>
-            <text>热门菜谱</text>
+            <text>热门图书</text>
         </view>
-        <!-- 菜谱列表 -->
+        <!-- 图书列表 -->
         <view class="hot-recipe-list">
             <block wx:for="{{ recipes }}">
                 <view class="hot-recipe-list-item" bindtap="to" id="{{item._id}}">
@@ -38,7 +43,7 @@
                     <!-- 发布人及浏览次数 -->
                     <view class="hot-recipe-list-item-info">
                         <view class="left">
-                            <image  src="../../imgs/users.png"></image>
+                            <image  src="{{item.avatarUrl}}"></image>
                             <text>{{item.nickName}}</text>
                         </view>
                         <view class="right">

@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "appid": "wx0a022f2a5cfe972e",
-  "projectname": "%E8%8F%9C%E8%B0%B1%E6%96%B0%E6%A8%A1%E6%9D%BF",
+  "projectname": "%E5%9B%BE%E4%B9%A6%E5%A4%A7%E5%85%A8",
   "libVersion": "2.16.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},

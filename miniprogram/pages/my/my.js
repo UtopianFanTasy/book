@@ -91,6 +91,7 @@ Page({
       desc: '正在获取', //不写不弹提示框
       success: res =>{      
         let userInfo = res.userInfo
+        wx.setStorageSync('useri', userInfo)
           this.setData({
             userInfo,
             isLogin: true

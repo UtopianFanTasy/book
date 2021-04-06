@@ -5,11 +5,11 @@ Page({
     data: {
         types: [{
                 src: "../../imgs/index_07.jpg",
-                typename: "营养菜谱"
+                typename: "欧洲书籍"
             },
             {
                 src: "../../imgs/index_09.jpg",
-                typename: "儿童菜谱"
+                typename: "儿童书籍"
             },
         ],
         recipes: [],
@@ -23,7 +23,24 @@ Page({
         })
     },
     async onLoad() {
-        this.getPage()
+    },
+    async onShow() {
+        wx.showLoading({
+            title: '正在加载',
+        })
+        let result = await get({
+            collection: 'menu',
+            limit: this.data.pagesize*(this.data.page-1),
+            skip: 0,
+            where: {}
+        }).catch(err => console.error(err))
+        if(result.data.length<this.data.pagesize){
+            this.data.ismore=false
+        }
+        this.setData({
+            recipes: result.data
+        })
+        wx.hideLoading()
     },
     onReachBottom: async function () {
         if(!this.data.ismore)return

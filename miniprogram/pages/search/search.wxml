@@ -2,7 +2,7 @@
   <!-- 搜索栏 -->
   <view class="search">
     <view class="search-box">
-      <input type="text" placeholder="请输入菜谱名称" placeholder-class="p-box" model:value="{{keyword}}" />
+      <input type="text" placeholder="请输入关键字" placeholder-class="p-box" model:value="{{keyword}}" />
       <icon type="search" color="#fff" size="30" bindtap="tolist" id=""></icon>
     </view>
   </view>

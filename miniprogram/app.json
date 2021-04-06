@@ -12,8 +12,8 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ea932a",
-    "navigationBarTitleText": "做菜吧",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "图书大全",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
